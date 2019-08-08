@@ -33,4 +33,6 @@ def instanceOfParentInterface = morning instanceof Greet
 def instanceOfChildInterface = morning instanceof Morning
 def instanceOfClass1 = morning instanceof GreetMorning
 
+assert morning instanceof Morning
+
 println "$instanceOfParentInterface and $instanceOfChildInterface and $instanceOfClass1"

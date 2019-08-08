@@ -40,11 +40,16 @@ switch(c) {
   case 31:
     println "value of c is $c"
     break
-  case 32:
-    println "value of c is $c"
+  case 30..35:
+    println "value of c is in range 30..35"
+    break
+  case Integer:
+    println "value of c is Integer"
     break
   default:
     println "value of c is NOT 30, 31 or 32"
     break
 }
 
+def z = [1,2,3,4,5,6,7,8]
+println 7 in z

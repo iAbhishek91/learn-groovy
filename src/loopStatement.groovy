@@ -22,3 +22,36 @@ while(c >= 0) {
   c -= 1
 }
 
+// times
+20.times {
+  print '*'
+}
+println ""
+
+// upto/downto
+2.upto(10) {
+  num -> print num
+}
+println ""
+10.downto(5) {
+  num -> print num
+}
+println ""
+
+//step
+1.step(2, 0.2) {
+  num -> print "$num, "
+}
+println ""
+
+//each
+[1,2,3,4,5,6,7].each {
+  println it
+};
+
+// each with index
+[1,2,3,4,5,6,7].eachWithIndex { def data, def i ->
+  println "$i $data"
+};
+
+// try any, 
