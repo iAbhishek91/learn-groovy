@@ -1,9 +1,12 @@
 # Groovy
 
+- open sourced.
 - optionally typed, dynamic language.
 - inspired Python, Small talk.
 - aligned to java(java-like-syntax).
 - very very popular, and most downloaded in 2018.
+
+- learn more from tests mention in the github.
 
 ## Documentation
 
@@ -16,6 +19,9 @@
 - Can sometime be treated as scripting language as well.
   - we directly execute the print statement, with a class. This internally gettin wrapped in a class, and puts the body in the run method.
 - Everything is treated as object. Consistency let you learn this language easily.
+- meta programming
+- AST
+- Builder
 
 ## Groovysh
 
@@ -184,11 +190,13 @@ assert greet instanceof Greeter
   - no separate implementation of Groovy.
   - However the syntax is bit differnt.
   - List are class are implemented using `ArrayList`, `LinedList`, `Set`, `SortedSet`.
+  - [10, 20, 30]
 
 - Map:
   - also known as dictionary in some languages.
   - they are key value pair.
   - Even for Map there are multiple implementation. like `LinkedHashMap`.
+  - [name: 'abhi', lname: 'das']
 
 #### Strings
 
@@ -342,6 +350,14 @@ similar to java. Refer `src/exception.groovy`
 - they are class with properties.
 - purpose: TDL
 
+### File system
+
+- `File` class can work with file also with directory.
+
+### thread
+
+- thread concept are same, however the implementation is bit different.
+
 ## Meta Programming
 
 - before doing some action such as calling a function, reading a property or writing a property we can do certain thing.
@@ -390,6 +406,12 @@ These are also differnt type of annotation used in groovy. Refer `/src/builder/*
   @grab(group='org.apache.commons', module='commons-lang4', version='3.4')
 )
 ```
+
+## Working with Webservices
+
+- We need to require read and write data.
+- there is no native implementation in groovy for REST client.
+- we can use @grab to pull down the [httpbuilder](https://github.com/jgritman/httpbuilder/)
 
 ## Jenkins
 
