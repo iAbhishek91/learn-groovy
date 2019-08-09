@@ -371,6 +371,14 @@ similar to java. Refer `src/exception.groovy`
 - Convension to end category class with name `Category`.
 - Use `use` keyword to access category class.
 
+### Compile time metaprogramming
+
+AST transformation.Refer `/src/annotation/*` package.
+
+### Builder
+
+These are also differnt type of annotation used in groovy. Refer `/src/builder/*`.
+
 ## Package/dependency management
 
 - this a annotation.
