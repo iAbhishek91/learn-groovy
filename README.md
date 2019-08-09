@@ -307,6 +307,7 @@ refer `src/loopStatement.groovy`
 - normal function cant be passed along(they are not objects), however closure are simiar to javascript function.
 - `it` is a keyword used inside a closure to access the current element. This wont work if we mention any parameter.
 - there are inbuilt attribute like `maximumNumberOfParameters` , `parameterTypes`.
+- no argument closure look something like this. `{ -> statement.. }`
 
 - **this** inside a closure resolves to class enclosing it.
 - **owner** resolves to corrosponding object where closure is defined. The object can be a class or a parent closure.
@@ -338,11 +339,37 @@ similar to java. Refer `src/exception.groovy`
 
 ### Groovy Bean
 
-need to read
+- they are class with properties.
+- purpose: TDL
 
 ## Meta Programming
 
 - before doing some action such as calling a function, reading a property or writing a property we can do certain thing.
+- Examples:
+  - invokeMethod: refer `/src/invokeMethod.groovy`
+  - getProperty: refer `/src/getProperty.groovy`
+  - propertyMissing: refer `/src/propertyMissing.groovy`
+  - methodmissing: refer `/src/methodmissing.groovy`
+  - setProperty: refer `/src/setProperty.groovy`
+
+### metaClass
+
+- each object has a default property called `metaClass`
+- and that property have many cool stuff.
+
+### Expando
+
+- this is an automatially created groovy bean class.
+- refer `src/meta/metaClass.groovy`.
+- allow to add properties and method to a class dynamically.
+
+### category
+
+- Few category are defined in the groovy language. You can also define your category.
+- there is a disadvantage in adding method to any class using `metaClass` is not suggested. For example we can add methods to String class. :(
+- To overcome this problem, category comes into picture. This will allow you to add method to a limited scope not globally for all the instance of the class.
+- Convension to end category class with name `Category`.
+- Use `use` keyword to access category class.
 
 ## Package/dependency management
 
